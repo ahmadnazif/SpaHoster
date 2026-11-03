@@ -9,6 +9,7 @@ builder.WebHost.ConfigureKestrel(x =>
 
 builder.Services.AddCors(x => x.AddDefaultPolicy(y => y.AllowAnyOrigin().AllowAnyHeader().AllowAnyMethod()));
 
+builder.Services.AddSystemd();
 builder.Services.AddWindowsService();
 
 var app = builder.Build();
