@@ -16,9 +16,6 @@ var app = builder.Build();
 
 app.UseCors();
 
-// NEW
-app.UseBlazorFrameworkFiles();
-
 app.UseStaticFiles(new StaticFileOptions
 {
     ServeUnknownFileTypes = true,
