@@ -16,6 +16,9 @@ var app = builder.Build();
 
 app.UseCors();
 
+// NEW
+app.UseBlazorFrameworkFiles();
+
 app.UseStaticFiles(new StaticFileOptions
 {
     ServeUnknownFileTypes = true,
@@ -27,6 +30,8 @@ app.UseStaticFiles(new StaticFileOptions
         }
     }
 });
+
+app.UseRouting();
 
 app.MapFallbackToFile("index.html");
 
